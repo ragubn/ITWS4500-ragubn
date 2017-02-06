@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- url for jquery -->
+  <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- url for bootsrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+  <!-- link to css -->
+  <link rel="stylesheet" href="lab1.css">
+  <title>Tweet Ticker</title>
+</head>
+	
+<body class= view>
+
+	<!-- header section -->
+  <header class = "page-header">
+    <h1>Tweet Tickers </h1>
+  </header>
+ 	
+ 	<!-- nested columns using bootstrap -->
+  <section class="container">
+    <section class="row">
+      <section class="col-sm-9">
+      <!--  Level 1: .col-sm-9 -->
+        <section class="row">
+          <section class="col-8 col-sm-6">
+            <!-- Level 2: .col-8 .col-sm-6 -->
+            <h2>3 Second Tweets:</h2>
+            <section id = "innerTwitter"></section>
+          </section>
+          <section class="col-4 col-sm-6">
+            <!-- Level 2: .col-4 .col-sm-6 -->
+            <h2>6 Second Facts:</h2>
+            <section id = "outerTwitter"></section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+
+    
+  	
+  <!-- link to js file -->
+  <script src="jquery.js"></script>
+</body>
+
+</html>
+
+
