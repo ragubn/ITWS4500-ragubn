@@ -1,0 +1,55 @@
+
+#demo{
+	padding:10px;
+	width:400px;
+	font-size:170%;
+	border:1px solid black;
+	background-color:white;
+	font-family: 'Bahiana', cursive;
+	position: relative;
+}
+
+.animate{
+-webkit-animation: mymove 7s;  
+    -webkit-animation-fill-mode: forwards; 
+    animation: mymove 7s;
+    animation-fill-mode: forwards;
+}
+
+.animate2{
+-webkit-animation: mymove2 7s;  
+    -webkit-animation-fill-mode: forwards;
+    animation: mymove2 7s;
+    animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes mymove {
+    from {top: 0px; left:100px;}
+    to {top: 500px; left:400px;}
+}
+
+@keyframes mymove {
+    from {top: 0px; left:100px;}
+    to {top: 500px; left:400px;}
+}
+
+@-webkit-keyframes mymove2 {
+	from {top: 500px; left:400px;}
+    to {top: 100px; left:700px;}
+}
+
+@keyframes mymove2 {
+	from {top: 500px; left:400px;}
+    to {top: 100px; left:700px;}
+}
+.view {
+	height: 100%;
+}
+.view {
+	background: url("PNG/bck.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
