@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- Initialize the app with ng-app directive -->
+
+<html ng-app="myApp">
+
+<head>
+        <!-- these 3 meta tage are for Bootstrap -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>NEWS</title>
+
+    <!-- Include Angular from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+
+    <!-- Google font api -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat|Oswald:700" rel="stylesheet">
+ 
+    <!-- Bootstrap from CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ 
+    <!-- link to my css -->
+    <link rel="stylesheet" href="lab4.css">
+ 
+</head>
+
+<!-- controller added -->
+
+<body ng-controller="mainController">
+
+<!-- Header with date and time -->
+    <div class="header">
+        <h1>Top News Articles By Source</h1>
+        <p>{{ dateTime | date:'MM-dd-yy @ h:mma'}}</p>
+        <p>{{weather}}</p>
+    </div>
+
+<!-- Buttons to set the view -->
+  <div class="header" class="panel">
+    <button type="button" ng-click="view=0">Home</button>
+    <button type="button" ng-click="view=1">Google</button>
+    <button type="button" ng-click="view=2">National Geographic</button>
+    <button type="button" ng-click="view=3">TechCrunch</button>
+    <button type="button" ng-click="view=4">Nasa-APOD</button>
+    
+  </div>
+
+  <!-- Below are the divs for views 0 - 4 -->
+  <div class="main" ng-show="view==0">
+    <h4 class="title">Welcome! <br><br> Click on a Source to see the Top News Article</h4>
+	<p if="demo"><p>  
+  </div>
+
+  <div class="main" ng-show="view==1">
+	<h2>Google's Top Article:</h2>
+	<p><span>Author: {{authorGN}}</span></p>
+	<p><span>Title: {{titleGN}}</span></p>
+	<p><span>Published: {{pubGN}}</span></p>
+	<p><span>Description: {{descGN}}</span></p>
+	<p><a ng-href="{{linkGN}}">Link to Article</a></p>
+	<p><img class="image" ng-src="{{imgSrcGN}}"/></p>
+  </div>
+
+  <div class="main" ng-show="view==2">
+	<h2>National Geographic's Top Article:</h2>
+	<p><span>Author: {{authorNG}}</span></p>
+	<p><span>Title: {{titleNG}}</span></p>
+	<p><span>Published: {{pubNG}}</span></p>
+	<p><span>Description: {{descNG}}</span></p>
+	<p><a ng-href="{{linkNG}}">Link to Article</a></p>
+	<p><img class="image" ng-src="{{imgSrcNG}}"/></p>
+  </div>
+
+  <div class="main" ng-show="view==3">
+    <h2>TechCrunch's Top Article:</h2>
+    <p><span>Author: {{authorTC}}</span></p>
+    <p><span>Title: {{titleTC}}</span></p>
+    <p><span>Published: {{pubTC}}</span></p>
+    <p><span>Description: {{descTC}}</span></p>
+    <p><a ng-href="{{linkTC}}">Link to Article</a></p>
+    <p><img class="image" ng-src="{{imgSrcTC}}"/></p>
+  </div>
+
+  <div class="main" ng-show="view==4">
+    <h2>NASA - Astronomy Photo of the Day:</h2>
+    <p>Title: {{titleNASA}}</p>
+    <p><img class="image" ng-src="{{imgSrcAPOD}}"/></p>
+    <p><a ng-href="{{media}}">Link to Video</a></p>
+    <p>Explanation {{exp}}</p>
+    <p>Copyright {{cw}}</p>
+  </div>
+
+
+ 
+</body>
+
+<!-- JQuery for Bootstrap and Angular -->
+<script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- call to my js file -->
+<script src="lab4.js"></script>
+</html>
