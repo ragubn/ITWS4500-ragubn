@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- Initialize the app with ng-app directive -->
+<html ng-app="myApp">
+
+<head>
+   
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Twitter Search and Save</title>
+
+  <!-- Include Angular from CDN --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+
+  <!-- Google font api -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat|Oswald:700" rel="stylesheet">
+
+  <!-- Bootstrap from CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- JQuery for Bootstrap and Angular -->
+  <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  <!-- link to css -->
+  <link rel="stylesheet" href="lab5.css">
+ 
+ 
+</head>
+<!-- controller added -->
+<body class="view" ng-controller="mainController">
+
+  <!-- Header with date and time -->
+  <div class="header">
+    <h1>Search Twitter!</h1>
+    <p>{{ dateTime | date:'MM-dd-yy @ h:mma'}}</p>
+  </div>
+
+  <!-- Form for sending search parameter -->
+  <form action="/" method="post" target=''>
+    <input type="text" name="searchFor" ng-model="searchFor" placeholder="search" />
+    <input type="number" name="count" ng-model="count" placeholder="count" />
+    <button type="submit" ng-click="start()">Submit</button>
+  </form>
+
+<!-- where to populate tweets -->
+  <div>
+    <p>{{tweets}}</p>
+  </div>
+
+ <!-- call to my js file -->
+  <script src="lab5.js"></script>
+</body>
+</html>

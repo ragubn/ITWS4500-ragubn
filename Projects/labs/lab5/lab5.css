@@ -1,0 +1,25 @@
+
+body{
+	width:100%;
+	margin:100px;
+}
+
+p{
+	display:block;
+	clear:left;
+	color:darkblue;
+	font-weight:bold;
+}
+#tweets{
+	width:500px;
+}
+.view {
+	height: 100%;
+}
+.view {
+	background: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQzkNaSVdieF2U9RhQYTVpdXo5AFa5LWcl0-DR2VhQrubxED_8V")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

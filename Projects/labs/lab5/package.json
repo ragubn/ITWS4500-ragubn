@@ -1,0 +1,13 @@
+{
+  "name": "twitter_search",
+  "version": "0.0.1",
+  "description": "Searching twitter",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.10.2",
+    "fs": "0.0.1-security",
+    "twit": "^2.1.1"
+  },
+  "license": "UNLICENSED",
+  "repository": "None"
+}
